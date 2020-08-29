@@ -9,7 +9,7 @@ public class Driver{
         keys = new int[1000];  
         int x = 0;
         int count = 0;
-        File numberFile = new File("./Lab_01/input_1000.txt");
+        File numberFile = new File("./input_1000.txt");
 
         try(Scanner readFile = new Scanner(numberFile)) {
             while(readFile.hasNextInt()){
@@ -31,15 +31,15 @@ public class Driver{
         long endTime;
         long duration;
 
-        while(n<2048){
-            for(int i=0;i<array2.length;i++){
+        while((Math.log(n) / Math.log(2)) <= 25){
+            for(int i=0;i<n;i++){
                 array2[i] = rand.nextInt(n+1);
             }
 
             //Linear search in array
 
             startTime = System.nanoTime();
-            searchAlgorithm.linearSearch(array2, keys, n);
+            searchAlgorithm.linearSearch(array2, keys, n-1);
             endTime = System.nanoTime();
             duration = (endTime - startTime)/1000000;
 
@@ -49,7 +49,7 @@ public class Driver{
             //Binary search in array size 16
 
             startTime = System.nanoTime();
-            searchAlgorithm.binarySearch(array2, 0, n, keys);
+            searchAlgorithm.binarySearch(array2, 0, n-1, keys);
             endTime = System.nanoTime();
             duration = (endTime - startTime)/1000000;
 
