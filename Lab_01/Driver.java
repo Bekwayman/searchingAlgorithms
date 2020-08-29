@@ -109,4 +109,51 @@ public class Driver{
         System.out.println("binary search for array size of "+ n +" took: " + duration + "ms");
         */
     }
+/*
+        for(int i=0;i<array2.length;i++)
+        {
+            array2[i] = rand.nextInt(n);
+        }
+
+        //Linear search in array size 16
+
+        long startTime = System.nanoTime();
+        searchAlgorithm.linearSearch(array2, keys, n);
+        long endTime = System.nanoTime();
+        long duration = (endTime - startTime)/1000000;
+
+        System.out.println("linear search for array size of "+ n +" took: " + duration + "ms");
+        Arrays.sort(array2);
+
+        //Binary search in array size 16
+
+        startTime = System.nanoTime();
+        searchAlgorithm.binarySearch(array2, 0, n, keys);
+        endTime = System.nanoTime();
+        duration = (endTime - startTime)/1000000;
+
+        System.out.println("binary search for array size of "+ n +" took: " + duration + "ms");
+
+        
+        System.out.println("________________________________________________________________");
+        //Linear search in array size 32
+        n=n*2;
+        startTime = System.nanoTime();
+        searchAlgorithm.linearSearch(array2, keys, n);
+        endTime = System.nanoTime();
+        duration = (endTime - startTime)/1000000;
+
+        System.out.println("linear search for array size of "+ n +" took: " + duration + "ms");
+        Arrays.sort(array2);
+
+        //Binary search in array size 32
+
+        startTime = System.nanoTime();
+        searchAlgorithm.binarySearch(array2, 0, n, keys);
+        endTime = System.nanoTime();
+        duration = (endTime - startTime)/1000000;
+
+        System.out.println("binary search for array size of "+ n +" took: " + duration + "ms");
+        */
+    }
 }
